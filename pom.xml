@@ -4,42 +4,103 @@
 
 	<groupId>io.github.foreverstr</groupId>
 	<artifactId>jorm-spring-boot-starter</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.5</version>
+	<packaging>jar</packaging>
+
+	<!-- 项目信息 -->
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>Spring Boot Starter for JORM Framework</description>
+	<url>https://github.com/ForeverStr/jorm-spring-boot-starter</url>
 
-	<!-- 依赖管理 -->
+	<!-- 继承Spring Boot父POM以简化配置 -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.6</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<java.version>11</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+	</properties>
+
+	<!-- 开源协议 -->
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<!-- 开发者信息 -->
+	<developers>
+		<developer>
+			<name>duyujie</name>
+			<email>wy1903265502@163.com</email>
+		</developer>
+	</developers>
+
+	<!-- 版本控制 -->
+	<scm>
+		<url>https://github.com/ForeverStr/jorm-spring-boot-starter</url>
+		<connection>scm:git:https://github.com/ForeverStr/jorm-spring-boot-starter.git</connection>
+		<developerConnection>scm:git:git@github.com:ForeverStr/jorm-spring-boot-starter.git</developerConnection>
+	</scm>
+
 	<dependencies>
 		<!-- Spring Boot自动配置 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-autoconfigure</artifactId>
-			<version>3.1.5</version>
-		</dependency>
-		<!-- 核心框架依赖 -->
-		<dependency>
-			<groupId>io.github.foreverstr</groupId>
-			<artifactId>jorm</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<!-- HikariCP连接池 -->
-		<dependency>
-			<groupId>com.zaxxer</groupId>
-			<artifactId>HikariCP</artifactId>
-			<version>4.0.3</version>
 		</dependency>
 		<!-- 配置注解处理器 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
-			<version>3.1.5</version>
+			<version>2.7.6</version>
 			<optional>true</optional>
+		</dependency>
+		<!-- 核心框架依赖 -->
+		<dependency>
+			<groupId>io.github.foreverstr</groupId>
+			<artifactId>jorm</artifactId>
+			<version>1.0.4</version>
+		</dependency>
+		<!-- HikariCP 连接池 -->
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+			<version>4.0.3</version>
+		</dependency>
+		<!-- Redis 依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<version>2.7.6</version>
+		</dependency>
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>4.3.1</version>
 		</dependency>
 	</dependencies>
 
-	<!-- 构建配置 -->
 	<build>
 		<plugins>
+			<!-- 编译器插件确保Java 11兼容性 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
 			<!-- 源码和Javadoc -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -63,7 +124,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- GPG签名 -->
+			<!-- gpg插件 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
@@ -77,6 +138,18 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<!-- 中央仓库发布插件 -->
+			<plugin>
+				<groupId>org.sonatype.central</groupId>
+				<artifactId>central-publishing-maven-plugin</artifactId>
+				<version>0.4.0</version>
+				<extensions>true</extensions>
+				<configuration>
+					<publishingServerId>central</publishingServerId>
+					<tokenAuth>true</tokenAuth>
+					<autoPublish>false</autoPublish>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
