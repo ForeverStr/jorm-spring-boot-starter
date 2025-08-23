@@ -1,0 +1,8 @@
+io\github\foreverstr\cache\redis\RedisSecondLevelCache.class
+io\github\foreverstr\cache\config\RedisCacheProperties.class
+io\github\foreverstr\cache\CacheManager.class
+io\github\foreverstr\autoconfigure\JormAutoConfiguration.class
+io\github\foreverstr\autoconfigure\JormProperties.class
+io\github\foreverstr\cache\SecondLevelCache.class
+META-INF\spring-configuration-metadata.json
+io\github\foreverstr\cache\config\RedisConfig.class

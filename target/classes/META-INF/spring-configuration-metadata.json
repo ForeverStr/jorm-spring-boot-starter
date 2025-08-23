@@ -1,0 +1,97 @@
+{
+  "groups": [
+    {
+      "name": "jorm",
+      "type": "io.github.foreverstr.autoconfigure.JormProperties",
+      "sourceType": "io.github.foreverstr.autoconfigure.JormProperties"
+    },
+    {
+      "name": "jorm.cache.redis",
+      "type": "io.github.foreverstr.cache.config.RedisCacheProperties",
+      "sourceType": "io.github.foreverstr.cache.config.RedisCacheProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jorm.cache.redis.cache-null-values",
+      "type": "java.lang.Boolean",
+      "sourceType": "io.github.foreverstr.cache.config.RedisCacheProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "jorm.cache.redis.default-expiration",
+      "type": "java.lang.Long",
+      "sourceType": "io.github.foreverstr.cache.config.RedisCacheProperties",
+      "defaultValue": 3600
+    },
+    {
+      "name": "jorm.cache.redis.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "io.github.foreverstr.cache.config.RedisCacheProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "jorm.cache.redis.key-prefix",
+      "type": "java.lang.String",
+      "sourceType": "io.github.foreverstr.cache.config.RedisCacheProperties",
+      "defaultValue": "jorm:cache:"
+    },
+    {
+      "name": "jorm.cache.redis.use-key-prefix",
+      "type": "java.lang.Boolean",
+      "sourceType": "io.github.foreverstr.cache.config.RedisCacheProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "jorm.connection-timeout",
+      "type": "java.lang.Long",
+      "sourceType": "io.github.foreverstr.autoconfigure.JormProperties",
+      "defaultValue": 30000
+    },
+    {
+      "name": "jorm.driver-class-name",
+      "type": "java.lang.String",
+      "sourceType": "io.github.foreverstr.autoconfigure.JormProperties"
+    },
+    {
+      "name": "jorm.idle-timeout",
+      "type": "java.lang.Long",
+      "sourceType": "io.github.foreverstr.autoconfigure.JormProperties",
+      "defaultValue": 600000
+    },
+    {
+      "name": "jorm.jdbc-url",
+      "type": "java.lang.String",
+      "sourceType": "io.github.foreverstr.autoconfigure.JormProperties"
+    },
+    {
+      "name": "jorm.max-lifetime",
+      "type": "java.lang.Long",
+      "sourceType": "io.github.foreverstr.autoconfigure.JormProperties",
+      "defaultValue": 1800000
+    },
+    {
+      "name": "jorm.maximum-pool-size",
+      "type": "java.lang.Integer",
+      "sourceType": "io.github.foreverstr.autoconfigure.JormProperties",
+      "defaultValue": 10
+    },
+    {
+      "name": "jorm.minimum-idle",
+      "type": "java.lang.Integer",
+      "sourceType": "io.github.foreverstr.autoconfigure.JormProperties",
+      "defaultValue": 2
+    },
+    {
+      "name": "jorm.password",
+      "type": "java.lang.String",
+      "sourceType": "io.github.foreverstr.autoconfigure.JormProperties"
+    },
+    {
+      "name": "jorm.username",
+      "type": "java.lang.String",
+      "sourceType": "io.github.foreverstr.autoconfigure.JormProperties"
+    }
+  ],
+  "hints": []
+}

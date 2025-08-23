@@ -1,0 +1,4 @@
+io.github.foreverstr.autoconfigure
+io.github.foreverstr.cache
+io.github.foreverstr.cache.config
+io.github.foreverstr.cache.redis

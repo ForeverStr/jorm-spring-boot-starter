@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"io.github.foreverstr.autoconfigure"},{"l":"io.github.foreverstr.cache"},{"l":"io.github.foreverstr.cache.config"},{"l":"io.github.foreverstr.cache.redis"},{"l":"所有程序包","u":"allpackages-index.html"}];updateSearchResults();

@@ -1,16 +1,15 @@
-package io.github.foreverstr.cache.config;
+package io.github.foreverstr.cache.redis;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "jorm.cache.redis")
 public class RedisCacheProperties {
     private boolean enabled = true;
-    private long defaultExpiration = 3600; // 默认过期时间（秒）
+    private long defaultExpiration = 3600;
     private String keyPrefix = "jorm:cache:";
     private boolean useKeyPrefix = true;
     private boolean cacheNullValues = false;
 
-    // Getters and Setters
     public boolean isEnabled() { return enabled; }
     public void setEnabled(boolean enabled) { this.enabled = enabled; }
 

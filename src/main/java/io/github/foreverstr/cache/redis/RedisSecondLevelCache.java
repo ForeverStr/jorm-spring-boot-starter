@@ -1,7 +1,6 @@
 package io.github.foreverstr.cache.redis;
 
 import io.github.foreverstr.cache.SecondLevelCache;
-import io.github.foreverstr.cache.config.RedisCacheProperties;
 import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.concurrent.TimeUnit;
@@ -47,7 +46,6 @@ public class RedisSecondLevelCache implements SecondLevelCache {
                 properties.getKeyPrefix() + region + ":*" :
                 region + ":*";
 
-        // 注意：在生产环境中，keys命令可能有问题，可以考虑使用SCAN命令
         redisTemplate.delete(redisTemplate.keys(pattern));
     }
 
