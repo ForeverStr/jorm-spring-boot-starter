@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: io.github.foreverstr.test.CacheIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.226 s <<< FAILURE! - in io.github.foreverstr.test.CacheIntegrationTest
+testCacheEvictionOnUpdate  Time elapsed: 1.563 s  <<< ERROR!
+org.springframework.transaction.TransactionSystemException: JDBC rollback failed; nested exception is java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+Caused by: java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+
+testQueryResultCached  Time elapsed: 0.106 s  <<< ERROR!
+org.springframework.transaction.TransactionSystemException: JDBC rollback failed; nested exception is java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+Caused by: java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+

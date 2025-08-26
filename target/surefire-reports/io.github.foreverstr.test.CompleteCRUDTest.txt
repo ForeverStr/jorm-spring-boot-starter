@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: io.github.foreverstr.test.CompleteCRUDTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 1.746 s <<< FAILURE! - in io.github.foreverstr.test.CompleteCRUDTest
+testBatchOperations  Time elapsed: 0.194 s  <<< ERROR!
+org.springframework.transaction.TransactionSystemException: JDBC rollback failed; nested exception is java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+Caused by: java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+
+testComplexQuery  Time elapsed: 0.114 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <3>
+	at io.github.foreverstr.test.CompleteCRUDTest.testComplexQuery(CompleteCRUDTest.java:77)
+

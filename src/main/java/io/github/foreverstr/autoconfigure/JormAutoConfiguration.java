@@ -8,6 +8,7 @@ import io.github.foreverstr.cache.redis.RedisCacheProperties;
 import io.github.foreverstr.cache.impl.NoOpSecondLevelCache;
 import io.github.foreverstr.cache.redis.RedisSecondLevelCache;
 import io.github.foreverstr.session.factory.Jorm;
+import org.springframework.beans.factory.SmartInitializingSingleton;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -18,17 +19,19 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy;
+import org.springframework.transaction.PlatformTransactionManager;
 
-import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
 @Configuration
 @EnableConfigurationProperties({JormProperties.class, RedisCacheProperties.class})
-public class JormAutoConfiguration {
+public class JormAutoConfiguration implements SmartInitializingSingleton {
     private final JormProperties properties;
     private final RedisCacheProperties cacheProperties;
     private final ApplicationContext applicationContext;
+
     @Autowired
     public JormAutoConfiguration(JormProperties properties,
                                  RedisCacheProperties cacheProperties,
@@ -37,6 +40,7 @@ public class JormAutoConfiguration {
         this.cacheProperties = cacheProperties;
         this.applicationContext = applicationContext;
     }
+
     @Bean
     @ConditionalOnMissingBean
     public DataSource dataSource() {
@@ -50,27 +54,20 @@ public class JormAutoConfiguration {
         config.setConnectionTimeout(properties.getConnectionTimeout());
         config.setIdleTimeout(properties.getIdleTimeout());
         config.setMaxLifetime(properties.getMaxLifetime());
-        HikariDataSource dataSource = new HikariDataSource(config);
-        Jorm.setDataSource(dataSource);
-        return dataSource;
+        config.setAutoCommit(false);
+        return new HikariDataSource(config);
     }
 
     @Bean
-    @Primary // 设置为主要的 DataSource，确保其他组件也使用事务感知的数据源
-    public DataSource jormDataSource(DataSource dataSource) {
-        return new TransactionAwareDataSourceProxy(dataSource);
+    @ConditionalOnMissingBean
+    public PlatformTransactionManager transactionManager(DataSource dataSource) {
+        return new DataSourceTransactionManager(dataSource);
     }
 
-    @PostConstruct
-    public void init() {
-        // 获取事务感知的 DataSource 并设置给 JORM
-        DataSource ds = applicationContext.getBean("jormDataSource", DataSource.class);
-        Jorm.setDataSource(ds);
-
-        // 初始化缓存管理器
-        SecondLevelCache cache = applicationContext.getBean(SecondLevelCache.class);
-        CacheManager.setSecondLevelCache(cache);
-        CacheManager.setCacheEnabled(cacheProperties.isEnabled() && !(cache instanceof NoOpSecondLevelCache));
+    @Bean
+    @Primary
+    public DataSource jormDataSource(DataSource dataSource) {
+        return new TransactionAwareDataSourceProxy(dataSource);
     }
 
     @Bean
@@ -86,8 +83,13 @@ public class JormAutoConfiguration {
         return new NoOpSecondLevelCache();
     }
 
-    @PostConstruct
-    public void initCacheManager() {
+    @Override
+    public void afterSingletonsInstantiated() {
+        // 初始化JORM数据源
+        DataSource ds = applicationContext.getBean("jormDataSource", DataSource.class);
+        Jorm.setDataSource(ds);
+
+        // 初始化缓存管理器
         SecondLevelCache cache = applicationContext.getBean(SecondLevelCache.class);
         CacheManager.setSecondLevelCache(cache);
         CacheManager.setCacheEnabled(cacheProperties.isEnabled() && !(cache instanceof NoOpSecondLevelCache));

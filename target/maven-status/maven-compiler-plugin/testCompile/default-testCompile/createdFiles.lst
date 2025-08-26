@@ -1,0 +1,8 @@
+io\github\foreverstr\test\TransactionIntegrationTest.class
+io\github\foreverstr\test\MySQLJormTest.class
+io\github\foreverstr\test\AbstractIntegrationTest.class
+io\github\foreverstr\test\CacheIntegrationTest.class
+io\github\foreverstr\test\CompleteCRUDTest.class
+io\github\foreverstr\test\service\TransactionalService.class
+io\github\foreverstr\test\config\RedisConfig.class
+io\github\foreverstr\test\TestApplication.class

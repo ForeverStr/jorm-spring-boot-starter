@@ -1,7 +1,5 @@
-D:\java_project\jorm-spring-boot-starter\src\main\java\io\github\foreverstr\cache\SecondLevelCache.java
+D:\java_project\jorm-spring-boot-starter\src\main\java\io\github\foreverstr\cache\redis\RedisCacheProperties.java
 D:\java_project\jorm-spring-boot-starter\src\main\java\io\github\foreverstr\cache\redis\RedisSecondLevelCache.java
 D:\java_project\jorm-spring-boot-starter\src\main\java\io\github\foreverstr\autoconfigure\JormProperties.java
-D:\java_project\jorm-spring-boot-starter\src\main\java\io\github\foreverstr\cache\config\RedisCacheProperties.java
 D:\java_project\jorm-spring-boot-starter\src\main\java\io\github\foreverstr\autoconfigure\JormAutoConfiguration.java
-D:\java_project\jorm-spring-boot-starter\src\main\java\io\github\foreverstr\cache\CacheManager.java
 D:\java_project\jorm-spring-boot-starter\src\main\java\io\github\foreverstr\cache\config\RedisConfig.java

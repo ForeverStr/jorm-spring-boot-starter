@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="io.github.foreverstr.test.CacheIntegrationTest" time="6.226" tests="2" errors="2" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="D:\java_project\jorm-spring-boot-starter\target\test-classes;D:\java_project\jorm-spring-boot-starter\target\classes;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-autoconfigure\2.7.6\spring-boot-autoconfigure-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\spring-context\5.3.24\spring-context-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\spring-expression\5.3.24\spring-expression-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\spring-jdbc\5.3.34\spring-jdbc-5.3.34.jar;D:\Maven\Maven-Repository\org\springframework\spring-beans\5.3.24\spring-beans-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\spring-core\5.3.24\spring-core-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\spring-jcl\5.3.24\spring-jcl-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\spring-tx\5.3.24\spring-tx-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-configuration-processor\2.7.6\spring-boot-configuration-processor-2.7.6.jar;D:\Maven\Maven-Repository\io\github\foreverstr\jorm\1.0.8\jorm-1.0.8.jar;D:\Maven\Maven-Repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;D:\Maven\Maven-Repository\com\zaxxer\HikariCP\4.0.3\HikariCP-4.0.3.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-starter-data-redis\2.7.6\spring-boot-starter-data-redis-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-starter\2.7.6\spring-boot-starter-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-starter-logging\2.7.6\spring-boot-starter-logging-2.7.6.jar;D:\Maven\Maven-Repository\ch\qos\logback\logback-classic\1.2.11\logback-classic-1.2.11.jar;D:\Maven\Maven-Repository\ch\qos\logback\logback-core\1.2.11\logback-core-1.2.11.jar;D:\Maven\Maven-Repository\org\apache\logging\log4j\log4j-to-slf4j\2.17.2\log4j-to-slf4j-2.17.2.jar;D:\Maven\Maven-Repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar;D:\Maven\Maven-Repository\org\slf4j\jul-to-slf4j\1.7.36\jul-to-slf4j-1.7.36.jar;D:\Maven\Maven-Repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;D:\Maven\Maven-Repository\org\yaml\snakeyaml\1.30\snakeyaml-1.30.jar;D:\Maven\Maven-Repository\org\springframework\data\spring-data-redis\2.7.6\spring-data-redis-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\data\spring-data-keyvalue\2.7.6\spring-data-keyvalue-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\data\spring-data-commons\2.7.6\spring-data-commons-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\spring-oxm\5.3.24\spring-oxm-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\spring-aop\5.3.24\spring-aop-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\spring-context-support\5.3.24\spring-context-support-5.3.24.jar;D:\Maven\Maven-Repository\io\lettuce\lettuce-core\6.1.10.RELEASE\lettuce-core-6.1.10.RELEASE.jar;D:\Maven\Maven-Repository\io\netty\netty-common\4.1.85.Final\netty-common-4.1.85.Final.jar;D:\Maven\Maven-Repository\io\netty\netty-handler\4.1.85.Final\netty-handler-4.1.85.Final.jar;D:\Maven\Maven-Repository\io\netty\netty-resolver\4.1.85.Final\netty-resolver-4.1.85.Final.jar;D:\Maven\Maven-Repository\io\netty\netty-buffer\4.1.85.Final\netty-buffer-4.1.85.Final.jar;D:\Maven\Maven-Repository\io\netty\netty-transport-native-unix-common\4.1.85.Final\netty-transport-native-unix-common-4.1.85.Final.jar;D:\Maven\Maven-Repository\io\netty\netty-codec\4.1.85.Final\netty-codec-4.1.85.Final.jar;D:\Maven\Maven-Repository\io\netty\netty-transport\4.1.85.Final\netty-transport-4.1.85.Final.jar;D:\Maven\Maven-Repository\io\projectreactor\reactor-core\3.4.25\reactor-core-3.4.25.jar;D:\Maven\Maven-Repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;D:\Maven\Maven-Repository\redis\clients\jedis\4.3.1\jedis-4.3.1.jar;D:\Maven\Maven-Repository\org\apache\commons\commons-pool2\2.11.1\commons-pool2-2.11.1.jar;D:\Maven\Maven-Repository\org\json\json\20220320\json-20220320.jar;D:\Maven\Maven-Repository\com\google\code\gson\gson\2.9.1\gson-2.9.1.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-starter-test\2.7.6\spring-boot-starter-test-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-test\2.7.6\spring-boot-test-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-test-autoconfigure\2.7.6\spring-boot-test-autoconfigure-2.7.6.jar;D:\Maven\Maven-Repository\com\jayway\jsonpath\json-path\2.7.0\json-path-2.7.0.jar;D:\Maven\Maven-Repository\net\minidev\json-smart\2.4.8\json-smart-2.4.8.jar;D:\Maven\Maven-Repository\net\minidev\accessors-smart\2.4.8\accessors-smart-2.4.8.jar;D:\Maven\Maven-Repository\org\ow2\asm\asm\9.1\asm-9.1.jar;D:\Maven\Maven-Repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;D:\Maven\Maven-Repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;D:\Maven\Maven-Repository\org\assertj\assertj-core\3.22.0\assertj-core-3.22.0.jar;D:\Maven\Maven-Repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;D:\Maven\Maven-Repository\org\mockito\mockito-core\4.5.1\mockito-core-4.5.1.jar;D:\Maven\Maven-Repository\net\bytebuddy\byte-buddy\1.12.19\byte-buddy-1.12.19.jar;D:\Maven\Maven-Repository\net\bytebuddy\byte-buddy-agent\1.12.19\byte-buddy-agent-1.12.19.jar;D:\Maven\Maven-Repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;D:\Maven\Maven-Repository\org\mockito\mockito-junit-jupiter\4.5.1\mockito-junit-jupiter-4.5.1.jar;D:\Maven\Maven-Repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;D:\Maven\Maven-Repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;D:\Maven\Maven-Repository\org\springframework\spring-test\5.3.24\spring-test-5.3.24.jar;D:\Maven\Maven-Repository\org\xmlunit\xmlunit-core\2.9.0\xmlunit-core-2.9.0.jar;D:\Maven\Maven-Repository\junit\junit\4.13.2\junit-4.13.2.jar;D:\Maven\Maven-Repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;D:\Maven\Maven-Repository\org\junit\jupiter\junit-jupiter\6.0.0-M2\junit-jupiter-6.0.0-M2.jar;D:\Maven\Maven-Repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;D:\Maven\Maven-Repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;D:\Maven\Maven-Repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;D:\Maven\Maven-Repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;D:\Maven\Maven-Repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;D:\Maven\Maven-Repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;D:\Maven\Maven-Repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;D:\Maven\Maven-Repository\org\testcontainers\testcontainers\1.17.6\testcontainers-1.17.6.jar;D:\Maven\Maven-Repository\org\apache\commons\commons-compress\1.22\commons-compress-1.22.jar;D:\Maven\Maven-Repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;D:\Maven\Maven-Repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;D:\Maven\Maven-Repository\com\github\docker-java\docker-java-api\3.2.13\docker-java-api-3.2.13.jar;D:\Maven\Maven-Repository\com\github\docker-java\docker-java-transport-zerodep\3.2.13\docker-java-transport-zerodep-3.2.13.jar;D:\Maven\Maven-Repository\com\github\docker-java\docker-java-transport\3.2.13\docker-java-transport-3.2.13.jar;D:\Maven\Maven-Repository\net\java\dev\jna\jna\5.8.0\jna-5.8.0.jar;D:\Maven\Maven-Repository\org\testcontainers\junit-jupiter\1.17.6\junit-jupiter-1.17.6.jar;D:\Maven\Maven-Repository\org\testcontainers\mysql\1.17.6\mysql-1.17.6.jar;D:\Maven\Maven-Repository\org\testcontainers\jdbc\1.17.6\jdbc-1.17.6.jar;D:\Maven\Maven-Repository\org\testcontainers\database-commons\1.17.6\database-commons-1.17.6.jar;D:\Maven\Maven-Repository\com\redis\testcontainers-redis\2.2.4\testcontainers-redis-2.2.4.jar;D:\Maven\Maven-Repository\com\redis\testcontainers-redis-common\2.2.4\testcontainers-redis-common-2.2.4.jar;D:\Maven\Maven-Repository\it\ozimov\embedded-redis\0.7.3\embedded-redis-0.7.3.jar;D:\Maven\Maven-Repository\com\google\guava\guava\21.0\guava-21.0.jar;D:\Maven\Maven-Repository\commons-io\commons-io\2.5\commons-io-2.5.jar;D:\Maven\Maven-Repository\org\slf4j\slf4j-simple\1.7.36\slf4j-simple-1.7.36.jar;D:\Maven\Maven-Repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;D:\Maven\Maven-Repository\com\fasterxml\jackson\core\jackson-databind\2.15.2\jackson-databind-2.15.2.jar;D:\Maven\Maven-Repository\com\fasterxml\jackson\core\jackson-annotations\2.13.4\jackson-annotations-2.13.4.jar;D:\Maven\Maven-Repository\com\fasterxml\jackson\core\jackson-core\2.13.4\jackson-core-2.13.4.jar;D:\Maven\Maven-Repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Users\杜玉杰\AppData\Local\Temp\surefire12739524723778762888\surefirebooter1444606428159281342.jar C:\Users\杜玉杰\AppData\Local\Temp\surefire12739524723778762888 2025-08-26T17-19-41_389-jvmRun1 surefire91415597049394043tmp surefire_010576349534121726151tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\java_project\jorm-spring-boot-starter\target\test-classes;D:\java_project\jorm-spring-boot-starter\target\classes;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-autoconfigure\2.7.6\spring-boot-autoconfigure-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\spring-context\5.3.24\spring-context-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\spring-expression\5.3.24\spring-expression-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\spring-jdbc\5.3.34\spring-jdbc-5.3.34.jar;D:\Maven\Maven-Repository\org\springframework\spring-beans\5.3.24\spring-beans-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\spring-core\5.3.24\spring-core-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\spring-jcl\5.3.24\spring-jcl-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\spring-tx\5.3.24\spring-tx-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-configuration-processor\2.7.6\spring-boot-configuration-processor-2.7.6.jar;D:\Maven\Maven-Repository\io\github\foreverstr\jorm\1.0.8\jorm-1.0.8.jar;D:\Maven\Maven-Repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;D:\Maven\Maven-Repository\com\zaxxer\HikariCP\4.0.3\HikariCP-4.0.3.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-starter-data-redis\2.7.6\spring-boot-starter-data-redis-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-starter\2.7.6\spring-boot-starter-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-starter-logging\2.7.6\spring-boot-starter-logging-2.7.6.jar;D:\Maven\Maven-Repository\ch\qos\logback\logback-classic\1.2.11\logback-classic-1.2.11.jar;D:\Maven\Maven-Repository\ch\qos\logback\logback-core\1.2.11\logback-core-1.2.11.jar;D:\Maven\Maven-Repository\org\apache\logging\log4j\log4j-to-slf4j\2.17.2\log4j-to-slf4j-2.17.2.jar;D:\Maven\Maven-Repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar;D:\Maven\Maven-Repository\org\slf4j\jul-to-slf4j\1.7.36\jul-to-slf4j-1.7.36.jar;D:\Maven\Maven-Repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;D:\Maven\Maven-Repository\org\yaml\snakeyaml\1.30\snakeyaml-1.30.jar;D:\Maven\Maven-Repository\org\springframework\data\spring-data-redis\2.7.6\spring-data-redis-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\data\spring-data-keyvalue\2.7.6\spring-data-keyvalue-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\data\spring-data-commons\2.7.6\spring-data-commons-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\spring-oxm\5.3.24\spring-oxm-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\spring-aop\5.3.24\spring-aop-5.3.24.jar;D:\Maven\Maven-Repository\org\springframework\spring-context-support\5.3.24\spring-context-support-5.3.24.jar;D:\Maven\Maven-Repository\io\lettuce\lettuce-core\6.1.10.RELEASE\lettuce-core-6.1.10.RELEASE.jar;D:\Maven\Maven-Repository\io\netty\netty-common\4.1.85.Final\netty-common-4.1.85.Final.jar;D:\Maven\Maven-Repository\io\netty\netty-handler\4.1.85.Final\netty-handler-4.1.85.Final.jar;D:\Maven\Maven-Repository\io\netty\netty-resolver\4.1.85.Final\netty-resolver-4.1.85.Final.jar;D:\Maven\Maven-Repository\io\netty\netty-buffer\4.1.85.Final\netty-buffer-4.1.85.Final.jar;D:\Maven\Maven-Repository\io\netty\netty-transport-native-unix-common\4.1.85.Final\netty-transport-native-unix-common-4.1.85.Final.jar;D:\Maven\Maven-Repository\io\netty\netty-codec\4.1.85.Final\netty-codec-4.1.85.Final.jar;D:\Maven\Maven-Repository\io\netty\netty-transport\4.1.85.Final\netty-transport-4.1.85.Final.jar;D:\Maven\Maven-Repository\io\projectreactor\reactor-core\3.4.25\reactor-core-3.4.25.jar;D:\Maven\Maven-Repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;D:\Maven\Maven-Repository\redis\clients\jedis\4.3.1\jedis-4.3.1.jar;D:\Maven\Maven-Repository\org\apache\commons\commons-pool2\2.11.1\commons-pool2-2.11.1.jar;D:\Maven\Maven-Repository\org\json\json\20220320\json-20220320.jar;D:\Maven\Maven-Repository\com\google\code\gson\gson\2.9.1\gson-2.9.1.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-starter-test\2.7.6\spring-boot-starter-test-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-test\2.7.6\spring-boot-test-2.7.6.jar;D:\Maven\Maven-Repository\org\springframework\boot\spring-boot-test-autoconfigure\2.7.6\spring-boot-test-autoconfigure-2.7.6.jar;D:\Maven\Maven-Repository\com\jayway\jsonpath\json-path\2.7.0\json-path-2.7.0.jar;D:\Maven\Maven-Repository\net\minidev\json-smart\2.4.8\json-smart-2.4.8.jar;D:\Maven\Maven-Repository\net\minidev\accessors-smart\2.4.8\accessors-smart-2.4.8.jar;D:\Maven\Maven-Repository\org\ow2\asm\asm\9.1\asm-9.1.jar;D:\Maven\Maven-Repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;D:\Maven\Maven-Repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;D:\Maven\Maven-Repository\org\assertj\assertj-core\3.22.0\assertj-core-3.22.0.jar;D:\Maven\Maven-Repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;D:\Maven\Maven-Repository\org\mockito\mockito-core\4.5.1\mockito-core-4.5.1.jar;D:\Maven\Maven-Repository\net\bytebuddy\byte-buddy\1.12.19\byte-buddy-1.12.19.jar;D:\Maven\Maven-Repository\net\bytebuddy\byte-buddy-agent\1.12.19\byte-buddy-agent-1.12.19.jar;D:\Maven\Maven-Repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;D:\Maven\Maven-Repository\org\mockito\mockito-junit-jupiter\4.5.1\mockito-junit-jupiter-4.5.1.jar;D:\Maven\Maven-Repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;D:\Maven\Maven-Repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;D:\Maven\Maven-Repository\org\springframework\spring-test\5.3.24\spring-test-5.3.24.jar;D:\Maven\Maven-Repository\org\xmlunit\xmlunit-core\2.9.0\xmlunit-core-2.9.0.jar;D:\Maven\Maven-Repository\junit\junit\4.13.2\junit-4.13.2.jar;D:\Maven\Maven-Repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;D:\Maven\Maven-Repository\org\junit\jupiter\junit-jupiter\6.0.0-M2\junit-jupiter-6.0.0-M2.jar;D:\Maven\Maven-Repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;D:\Maven\Maven-Repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;D:\Maven\Maven-Repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;D:\Maven\Maven-Repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;D:\Maven\Maven-Repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;D:\Maven\Maven-Repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;D:\Maven\Maven-Repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;D:\Maven\Maven-Repository\org\testcontainers\testcontainers\1.17.6\testcontainers-1.17.6.jar;D:\Maven\Maven-Repository\org\apache\commons\commons-compress\1.22\commons-compress-1.22.jar;D:\Maven\Maven-Repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;D:\Maven\Maven-Repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;D:\Maven\Maven-Repository\com\github\docker-java\docker-java-api\3.2.13\docker-java-api-3.2.13.jar;D:\Maven\Maven-Repository\com\github\docker-java\docker-java-transport-zerodep\3.2.13\docker-java-transport-zerodep-3.2.13.jar;D:\Maven\Maven-Repository\com\github\docker-java\docker-java-transport\3.2.13\docker-java-transport-3.2.13.jar;D:\Maven\Maven-Repository\net\java\dev\jna\jna\5.8.0\jna-5.8.0.jar;D:\Maven\Maven-Repository\org\testcontainers\junit-jupiter\1.17.6\junit-jupiter-1.17.6.jar;D:\Maven\Maven-Repository\org\testcontainers\mysql\1.17.6\mysql-1.17.6.jar;D:\Maven\Maven-Repository\org\testcontainers\jdbc\1.17.6\jdbc-1.17.6.jar;D:\Maven\Maven-Repository\org\testcontainers\database-commons\1.17.6\database-commons-1.17.6.jar;D:\Maven\Maven-Repository\com\redis\testcontainers-redis\2.2.4\testcontainers-redis-2.2.4.jar;D:\Maven\Maven-Repository\com\redis\testcontainers-redis-common\2.2.4\testcontainers-redis-common-2.2.4.jar;D:\Maven\Maven-Repository\it\ozimov\embedded-redis\0.7.3\embedded-redis-0.7.3.jar;D:\Maven\Maven-Repository\com\google\guava\guava\21.0\guava-21.0.jar;D:\Maven\Maven-Repository\commons-io\commons-io\2.5\commons-io-2.5.jar;D:\Maven\Maven-Repository\org\slf4j\slf4j-simple\1.7.36\slf4j-simple-1.7.36.jar;D:\Maven\Maven-Repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;D:\Maven\Maven-Repository\com\fasterxml\jackson\core\jackson-databind\2.15.2\jackson-databind-2.15.2.jar;D:\Maven\Maven-Repository\com\fasterxml\jackson\core\jackson-annotations\2.13.4\jackson-annotations-2.13.4.jar;D:\Maven\Maven-Repository\com\fasterxml\jackson\core\jackson-core\2.13.4\jackson-core-2.13.4.jar;D:\Maven\Maven-Repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\杜玉杰"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\java_project\jorm-spring-boot-starter"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\杜玉杰\AppData\Local\Temp\surefire12739524723778762888\surefirebooter1444606428159281342.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.3+7-LTS-152"/>
+    <property name="user.name" value="杜玉杰"/>
+    <property name="stdout.encoding" value="GBK"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="D:\Maven\Maven-Repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\杜玉杰\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2023.3.2"/>
+    <property name="java.version" value="21.0.3"/>
+    <property name="user.dir" value="D:\java_project\jorm-spring-boot-starter"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\VMware Workstation Pro v17.0.0 x64\bin\;D:\jdk\jdk-11.0.25\bin;D:\jdk\jdk-11.0.25\jre\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;D:\python\Scripts\;D:\python\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;D:\MySQL\mysql-8.3.0-winx64\bin;D:\matlab\runtime\win64;D:\matlab\bin;D:\matlab\polyspace\bin;D:\go\bin;D:\gcc\bin;D:\node\;D:\GnuPG\bin;D:\Gpg4win\..\GnuPG\bin;D:\weChat\微信web开发者工具\dll;D:\matlabexe\runtime\win64;D:\matlabexe\bin;D:\WinSCP\;D:\Maven\apache-maven-3.9.6\bin;C:\Users\杜玉杰\AppData\Local\Microsoft\WindowsApps;D:\pycharm\PyCharm 2024.1.1\bin;;D:\pycharm\PyCharm Community Edition 2023.2.5\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2023.3.2\bin;;C:\Users\杜玉杰\go\bin;C:\Users\杜玉杰\AppData\Roaming\npm;D:\idea\Microsoft VS Code\bin;D:\golang\GoLand 2024.3.1\bin;;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="GBK"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.3+7-LTS-152"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="maven.repo.local" value="D:\Maven\Maven-Repository"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testCacheEvictionOnUpdate" classname="io.github.foreverstr.test.CacheIntegrationTest" time="1.563">
+    <error message="JDBC rollback failed; nested exception is java.sql.SQLNonTransientConnectionException: Can&apos;t call rollback when autocommit=true" type="org.springframework.transaction.TransactionSystemException">org.springframework.transaction.TransactionSystemException: JDBC rollback failed; nested exception is java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+Caused by: java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+</error>
+    <system-out><![CDATA[17:19:42.636 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+17:19:42.646 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+17:19:42.685 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [io.github.foreverstr.test.CacheIntegrationTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+17:19:42.697 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [io.github.foreverstr.test.CacheIntegrationTest], using SpringBootContextLoader
+17:19:42.700 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [io.github.foreverstr.test.CacheIntegrationTest]: class path resource [io/github/foreverstr/test/CacheIntegrationTest-context.xml] does not exist
+17:19:42.700 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [io.github.foreverstr.test.CacheIntegrationTest]: class path resource [io/github/foreverstr/test/CacheIntegrationTestContext.groovy] does not exist
+17:19:42.701 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [io.github.foreverstr.test.CacheIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:19:42.756 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [io.github.foreverstr.test.CacheIntegrationTest]
+17:19:42.913 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [io.github.foreverstr.test.CacheIntegrationTest]: using defaults.
+17:19:42.914 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+17:19:42.924 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+17:19:42.932 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@29a5f4e7, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@79c97cb, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2d9caaeb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@42a15bdc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@44a59da3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27e47833, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6f6745d6, org.springframework.test.context.event.EventPublishingTestExecutionListener@27508c5d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4f704591, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4b5189ac, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1e4d3ce5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ddc6915, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@704deff2, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@379614be]
+17:19:42.936 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@518caac3 testClass = CacheIntegrationTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@68034211 testClass = CacheIntegrationTest, locations = '{}', classes = '{class io.github.foreverstr.test.TestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@346d61be, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2cd2a21f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@120f102b, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@27ff5d15, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@69997e9d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@3712b94], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+17:19:43.472 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@518caac3 testClass = CacheIntegrationTest, testInstance = io.github.foreverstr.test.CacheIntegrationTest@34c01041, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@68034211 testClass = CacheIntegrationTest, locations = '{}', classes = '{class io.github.foreverstr.test.TestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@346d61be, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2cd2a21f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@120f102b, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@27ff5d15, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@69997e9d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@3712b94], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.6)
+
+2025-08-26 17:19:43.940  WARN 22768 --- [           main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/Maven/Maven-Repository/org/json/json/20220320/json-20220320.jar!/org/json/JSONObject.class
+	jar:file:/D:/Maven/Maven-Repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-08-26 17:19:43.959  INFO 22768 --- [           main] i.g.f.test.CacheIntegrationTest          : Starting CacheIntegrationTest using Java 21.0.3 on 浩宇 with PID 22768 (started by 杜玉杰 in D:\java_project\jorm-spring-boot-starter)
+2025-08-26 17:19:43.960  INFO 22768 --- [           main] i.g.f.test.CacheIntegrationTest          : No active profile set, falling back to 1 default profile: "default"
+2025-08-26 17:19:44.580  INFO 22768 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-26 17:19:44.584  INFO 22768 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-26 17:19:44.610  INFO 22768 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-08-26 17:19:45.771  INFO 22768 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-26 17:19:46.278  INFO 22768 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-26 17:19:47.066  INFO 22768 --- [           main] i.g.f.test.CacheIntegrationTest          : Started CacheIntegrationTest in 3.567 seconds (JVM running for 5.312)
+2025-08-26 17:19:47.175  INFO 22768 --- [           main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@518caac3 testClass = CacheIntegrationTest, testInstance = io.github.foreverstr.test.CacheIntegrationTest@34c01041, testMethod = testCacheEvictionOnUpdate@CacheIntegrationTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@68034211 testClass = CacheIntegrationTest, locations = '{}', classes = '{class io.github.foreverstr.test.TestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@346d61be, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2cd2a21f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@120f102b, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@27ff5d15, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@69997e9d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@3712b94], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@2b3f7704]; rollback [true]
+2025-08-26 17:19:48.441  INFO 22768 --- [           main] i.g.foreverstr.sqlBuilder.SaveBuilder    : Insert fields: [private java.lang.String io.github.foreverstr.entity.User.name, private int io.github.foreverstr.entity.User.age, private java.lang.String io.github.foreverstr.entity.User.status, private java.lang.String io.github.foreverstr.entity.User.department]
+2025-08-26 17:19:48.441  INFO 22768 --- [           main] i.g.foreverstr.sqlBuilder.SaveBuilder    : Placeholders: ?, ?, ?, ?
+2025-08-26 17:19:48.514  INFO 22768 --- [           main] i.g.foreverstr.sqlBuilder.FindBuilder    : SELECT * FROM users WHERE user_name = ?
+2025-08-26 17:19:48.600  INFO 22768 --- [           main] i.g.foreverstr.sqlBuilder.FindBuilder    : SELECT * FROM users WHERE user_name = ?
+2025-08-26 17:19:48.638  WARN 22768 --- [           main] com.zaxxer.hikari.pool.ProxyConnection   : HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@2fcffc05 marked as broken because of SQLSTATE(08003), ErrorCode(0)
+
+java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:111) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:98) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:90) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:64) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.rollback(ConnectionImpl.java:1792) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.zaxxer.hikari.pool.ProxyConnection.rollback(ProxyConnection.java:396) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.rollback(HikariProxyConnection.java) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doRollback(DataSourceTransactionManager.java:352) ~[spring-jdbc-5.3.34.jar:5.3.34]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:835) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.rollback(AbstractPlatformTransactionManager.java:809) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.transaction.TransactionContext.endTransaction(TransactionContext.java:128) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.afterTestMethod(TransactionalTestExecutionListener.java:255) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:445) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.afterEach(SpringExtension.java:206) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+
+2025-08-26 17:19:48.643  WARN 22768 --- [           main] o.s.test.context.TestContextManager      : Caught exception while invoking 'afterTestMethod' callback on TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@27e47833] for test method [void io.github.foreverstr.test.CacheIntegrationTest.testCacheEvictionOnUpdate()] and test instance [io.github.foreverstr.test.CacheIntegrationTest@34c01041]
+
+org.springframework.transaction.TransactionSystemException: JDBC rollback failed; nested exception is java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.translateException(DataSourceTransactionManager.java:439) ~[spring-jdbc-5.3.34.jar:5.3.34]
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doRollback(DataSourceTransactionManager.java:355) ~[spring-jdbc-5.3.34.jar:5.3.34]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:835) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.rollback(AbstractPlatformTransactionManager.java:809) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.transaction.TransactionContext.endTransaction(TransactionContext.java:128) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.afterTestMethod(TransactionalTestExecutionListener.java:255) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:445) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.afterEach(SpringExtension.java:206) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+Caused by: java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:111) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:98) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:90) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:64) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.rollback(ConnectionImpl.java:1792) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.zaxxer.hikari.pool.ProxyConnection.rollback(ProxyConnection.java:396) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.rollback(HikariProxyConnection.java) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doRollback(DataSourceTransactionManager.java:352) ~[spring-jdbc-5.3.34.jar:5.3.34]
+	... 57 common frames omitted
+
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/D:/Maven/Maven-Repository/ch/qos/logback/logback-classic/1.2.11/logback-classic-1.2.11.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/D:/Maven/Maven-Repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+]]></system-err>
+  </testcase>
+  <testcase name="testQueryResultCached" classname="io.github.foreverstr.test.CacheIntegrationTest" time="0.106">
+    <error message="JDBC rollback failed; nested exception is java.sql.SQLNonTransientConnectionException: Can&apos;t call rollback when autocommit=true" type="org.springframework.transaction.TransactionSystemException">org.springframework.transaction.TransactionSystemException: JDBC rollback failed; nested exception is java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+Caused by: java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+</error>
+    <system-out><![CDATA[2025-08-26 17:19:48.669  INFO 22768 --- [           main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@518caac3 testClass = CacheIntegrationTest, testInstance = io.github.foreverstr.test.CacheIntegrationTest@34647f58, testMethod = testQueryResultCached@CacheIntegrationTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@68034211 testClass = CacheIntegrationTest, locations = '{}', classes = '{class io.github.foreverstr.test.TestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@346d61be, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2cd2a21f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@120f102b, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@27ff5d15, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@69997e9d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@3712b94], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@2b3f7704]; rollback [true]
+2025-08-26 17:19:48.676  INFO 22768 --- [           main] i.g.foreverstr.sqlBuilder.SaveBuilder    : Insert fields: [private java.lang.String io.github.foreverstr.entity.User.name, private int io.github.foreverstr.entity.User.age, private java.lang.String io.github.foreverstr.entity.User.status, private java.lang.String io.github.foreverstr.entity.User.department]
+2025-08-26 17:19:48.676  INFO 22768 --- [           main] i.g.foreverstr.sqlBuilder.SaveBuilder    : Placeholders: ?, ?, ?, ?
+2025-08-26 17:19:48.690  INFO 22768 --- [           main] i.g.foreverstr.sqlBuilder.FindBuilder    : SELECT * FROM users WHERE user_name = ?
+2025-08-26 17:19:48.767  WARN 22768 --- [           main] com.zaxxer.hikari.pool.ProxyConnection   : HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@6ba226cd marked as broken because of SQLSTATE(08003), ErrorCode(0)
+
+java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:111) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:98) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:90) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:64) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.rollback(ConnectionImpl.java:1792) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.zaxxer.hikari.pool.ProxyConnection.rollback(ProxyConnection.java:396) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.rollback(HikariProxyConnection.java) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doRollback(DataSourceTransactionManager.java:352) ~[spring-jdbc-5.3.34.jar:5.3.34]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:835) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.rollback(AbstractPlatformTransactionManager.java:809) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.transaction.TransactionContext.endTransaction(TransactionContext.java:128) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.afterTestMethod(TransactionalTestExecutionListener.java:255) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:445) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.afterEach(SpringExtension.java:206) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+
+2025-08-26 17:19:48.770  WARN 22768 --- [           main] o.s.test.context.TestContextManager      : Caught exception while invoking 'afterTestMethod' callback on TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@27e47833] for test method [void io.github.foreverstr.test.CacheIntegrationTest.testQueryResultCached()] and test instance [io.github.foreverstr.test.CacheIntegrationTest@34647f58]
+
+org.springframework.transaction.TransactionSystemException: JDBC rollback failed; nested exception is java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.translateException(DataSourceTransactionManager.java:439) ~[spring-jdbc-5.3.34.jar:5.3.34]
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doRollback(DataSourceTransactionManager.java:355) ~[spring-jdbc-5.3.34.jar:5.3.34]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:835) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.rollback(AbstractPlatformTransactionManager.java:809) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.transaction.TransactionContext.endTransaction(TransactionContext.java:128) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.afterTestMethod(TransactionalTestExecutionListener.java:255) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:445) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.afterEach(SpringExtension.java:206) ~[spring-test-5.3.24.jar:5.3.24]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+Caused by: java.sql.SQLNonTransientConnectionException: Can't call rollback when autocommit=true
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:111) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:98) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:90) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:64) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.rollback(ConnectionImpl.java:1792) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.zaxxer.hikari.pool.ProxyConnection.rollback(ProxyConnection.java:396) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.rollback(HikariProxyConnection.java) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doRollback(DataSourceTransactionManager.java:352) ~[spring-jdbc-5.3.34.jar:5.3.34]
+	... 57 common frames omitted
+
+]]></system-out>
+  </testcase>
+</testsuite>
